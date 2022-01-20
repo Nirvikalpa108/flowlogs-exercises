@@ -7,6 +7,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "flowlogs",
     libraryDependencies ++= Seq(
+      "com.softwaremill.sttp.client3" %% "core" % "3.3.18",
       "org.scalatest" %% "scalatest" % "3.2.9" % Test,
     ),
   )
