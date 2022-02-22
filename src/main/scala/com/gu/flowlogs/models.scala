@@ -1,7 +1,7 @@
 package com.gu.flowlogs
 
 
-case class FullFlowLog(
+case class FlowLog(
   version: Int,
   accountId: String,
   interfaceId: String,

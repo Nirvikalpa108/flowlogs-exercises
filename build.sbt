@@ -3,11 +3,17 @@ ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "com.example"
 ThisBuild / organizationName := "example"
 
+val circeVersion = "0.14.1"
+
 lazy val root = (project in file("."))
   .settings(
     name := "flowlogs",
     libraryDependencies ++= Seq(
       "com.softwaremill.sttp.client3" %% "core" % "3.3.18",
+      "io.circe" %% "circe-core" % circeVersion,
+      "io.circe" %% "circe-generic" % circeVersion,
+      "io.circe" %% "circe-parser" % circeVersion,
+      "org.typelevel" %% "cats-core" % "2.3.0",
       "org.scalatest" %% "scalatest" % "3.2.9" % Test,
     ),
   )
